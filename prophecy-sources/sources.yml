@@ -1,3 +1,70 @@
 ---
 version: 2
-sources: []
+sources:
+- name: "danyelle.demo"
+  description: ""
+  database: "danyelle"
+  schema: "demo"
+  tables:
+  - name: "orders"
+    config:
+      tags:
+      - "pipeline:top10"
+    quoting:
+      identifier: true
+    columns:
+    - name: "order_id"
+      dataType:
+        type: "Bigint"
+    - name: "customer_id"
+      dataType:
+        type: "Bigint"
+    - name: "order_date"
+      dataType:
+        type: "Date"
+    - name: "status"
+      dataType:
+        type: "String"
+    - name: "credit_card_amount"
+      dataType:
+        type: "Double"
+    - name: "coupon_amount"
+      dataType:
+        type: "Double"
+    - name: "bank_transfer_amount"
+      dataType:
+        type: "Double"
+    - name: "gift_card_amount"
+      dataType:
+        type: "Double"
+    - name: "amount"
+      dataType:
+        type: "Double"
+  - name: "customers"
+    config:
+      tags:
+      - "pipeline:top10"
+    quoting:
+      identifier: true
+    columns:
+    - name: "customer_id"
+      dataType:
+        type: "Bigint"
+    - name: "first_name"
+      dataType:
+        type: "String"
+    - name: "last_name"
+      dataType:
+        type: "String"
+    - name: "first_order"
+      dataType:
+        type: "Date"
+    - name: "most_recent_order"
+      dataType:
+        type: "Date"
+    - name: "total_orders"
+      dataType:
+        type: "Bigint"
+    - name: "customer_lifetime_value"
+      dataType:
+        type: "Double"

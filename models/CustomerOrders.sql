@@ -68,7 +68,7 @@ top_10_rows AS (
   
   FROM revenue_order_summary
   
-  FETCH NEXT 10 ROWS ONLY
+  LIMIT 10
 
 )
 

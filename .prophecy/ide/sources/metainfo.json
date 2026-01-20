@@ -7,8 +7,7 @@
     "path" : "",
     "editable" : true
   },
-  "providerType" : "snowflake",
-  "fabricId" : "15764",
+  "providerType" : "databricks",
   "prophecyIDEFolder" : {
     "name" : "",
     "children" : { },
@@ -257,6 +256,10 @@
     "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ {
+    "name" : "CustomerOrders",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
     "name" : "customers",
     "type" : "Model",
     "syncedOnce" : true
