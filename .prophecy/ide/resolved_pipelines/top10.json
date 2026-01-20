@@ -11,44 +11,64 @@
       }
     },
     "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false,
-    "processesVsModelFiles" : {
-      "customer_orders_##WRU8lXwA" : "models/top10/top10__top_10_customers_by_spend.sql",
-      "customers##J1wpvuwk" : "models/top10/top10__top_10_customers_by_spend.sql",
-      "customer_spend_a##GxVYr3qV" : "models/top10/top10__top_10_customers_by_spend.sql",
-      "sort_by_total_sp##SIjAMnv8" : "models/top10/top10__top_10_customers_by_spend.sql",
-      "top_10_customers_by_spend_z0yxAr8Z" : "models/top10/top10__top_10_customers_by_spend.sql",
-      "4ieObKt2FVdebjlnMRpuG" : "models/top10/top10__top_10_customers_by_spend.sql",
-      "top_10_customers##Lr6dBtGJ" : "models/top10/top10__top_10_customers_by_spend.sql"
-    }
+    "publishDiagnosticMetrics" : false
   },
   "processes" : {
-    "top_10_customers##Lr6dBtGJ" : {
-      "id" : "top_10_customers##Lr6dBtGJ",
-      "component" : "Model",
+    "customers##J1wpvuwk" : {
+      "id" : "customers##J1wpvuwk",
+      "component" : "Dataset",
       "metadata" : {
-        "label" : "top10__top_10_customers_by_spend",
+        "label" : "customers",
+        "x" : -420,
+        "y" : -140,
         "phase" : 0
       },
       "properties" : {
-        "modelName" : "top10__top_10_customers_by_spend"
-      },
-      "visualMetaInfo" : {
-        "visualProcessIds" : [ "top_10_customers_by_spend_z0yxAr8Z", "top_10_customers##Lr6dBtGJ", "sort_by_total_sp##SIjAMnv8", "customer_spend_a##GxVYr3qV", "customer_orders_##WRU8lXwA", "customers##J1wpvuwk", "4ieObKt2FVdebjlnMRpuG" ],
-        "type" : "ephemeral",
-        "isTemporaryTable" : true
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "customers",
+          "sourceType" : "Table",
+          "sourceName" : "danyelle.demo",
+          "alias" : ""
+        }
       },
       "ports" : {
-        "inputs" : [ {
-          "id" : "top10__top_10_customers_by_spend_in_0",
-          "slug" : "in_0"
-        }, {
-          "id" : "top10__top_10_customers_by_spend_in_1",
-          "slug" : "in_1"
-        } ],
+        "inputs" : [ ],
         "outputs" : [ {
-          "id" : "top10__top_10_customers_by_spend_out_0",
-          "slug" : "out_0"
+          "id" : "GhScI18H",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 1
+    },
+    "4ieObKt2FVdebjlnMRpuG" : {
+      "id" : "4ieObKt2FVdebjlnMRpuG",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "orders",
+        "x" : -420,
+        "y" : -280,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "orders",
+          "sourceType" : "Table",
+          "sourceName" : "danyelle.demo",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "MnIFNinI",
+          "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       }
