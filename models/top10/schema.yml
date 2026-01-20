@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "top10__top_10_customers_by_spend"
+  tags:
+  - "prophecy_temp"
